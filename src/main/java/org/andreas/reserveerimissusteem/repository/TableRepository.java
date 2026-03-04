@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface TableRepository extends JpaRepository<Table, Integer> {
     List<Table> findByZone(String zone);
+    Table findByName(String name);
 }
