@@ -10,21 +10,32 @@ import java.time.LocalDateTime;
 public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    private int id;
 
     @Column(name="RESERVATION_NAME")
-    String name;
+    private String name;
 
     @Column(name="RESERVATION_NUMBER_OF_PEOPLE")
-    int numberOfPeople;
+    private int numberOfPeople;
 
     @ManyToOne
     @JoinColumn(name = "TABLE_ID")
-    Table table;
+    private Table table;
 
     @Column(name="RESERVATION_START")
-    LocalDateTime start;
+    private LocalDateTime start;
 
     @Column(name="RESERVATION_END")
-    LocalDateTime end;
+    private LocalDateTime end;
+
+    public Reservation() {
+    }
+
+    public Reservation(String name, int numberOfPeople, Table table, LocalDateTime start, LocalDateTime end) {
+        this.name = name;
+        this.numberOfPeople = numberOfPeople;
+        this.table = table;
+        this.start = start;
+        this.end = end;
+    }
 }
