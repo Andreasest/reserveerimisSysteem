@@ -37,3 +37,18 @@ __screenshots__/
 
 # Vite
 *.timestamp-*-*.mjs
+
+# Environment variables
+.env
+.env.*
+
+# Lock files (optional, depend on your workflow)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Optional npm cache directory
+.npm
+
+# build cache
+.vite/
