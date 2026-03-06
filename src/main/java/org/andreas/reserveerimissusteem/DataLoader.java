@@ -24,18 +24,18 @@ public class DataLoader implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        if (tableRepository.count()<0) {
+        if (tableRepository.count()==0) {
             tableRepository.saveAll(List.of(
-                    new Table("M1", 4, false, false, "MAIN", 1, 1),
-                    new Table("M2", 4, false, true, "MAIN", 1, 1),
-                    new Table("M3", 4, true, false, "MAIN", 1, 1),
-                    new Table("M4", 2, true, true, "MAIN", 3, 2),
+                    new Table("M1", 6, true, true, "MAIN", 20, 26),
+                    new Table("M2", 4, false, true, "MAIN", 40, 26),
+                    new Table("M3", 4, true, true, "MAIN", 20, 56),
+                    new Table("M4", 2, false, false, "MAIN", 40, 56),
                     //terrace
-                    new Table("T1", 2, false, false, "TERRACE", 1, 1),
-                    new Table("T2", 4, false, false, "TERRACE", 2, 1),
+                    new Table("T1", 2, false, false, "TERRACE", 35, 83),
+                    new Table("T2", 4, false, false, "TERRACE", 70, 83),
                     //private
-                    new Table("P1", 6, true, true, "PRIVATE", 1, 1),
-                    new Table("P2", 8, true, true, "PRIVATE", 2, 1)
+                    new Table("P1", 6, true, true, "PRIVATE", 68, 26),
+                    new Table("P2", 8, true, true, "PRIVATE", 83, 26)
             ));
         }
         reservationRepository.deleteAll();

@@ -43,7 +43,6 @@ __screenshots__/
 .env.*
 
 # Lock files (optional, depend on your workflow)
-package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
