@@ -18,7 +18,8 @@ Tehnoloogia: Spring boot backend, postgres andmebaas ja Vue.js frontend.
 - Kasutasin taustapildina restorani plaani
 - Kujutasin lauad üle selle tausta, kasutades protsentuaalseid asukohti, mida salvestasin andmebaasis
 - Lisaks parandasin soovitusalgoritmi, et kui puudub 1 laud kuhu kogu seltskond ära mahuks soovitataks kaks lähestikust lauda
-- Lisasin päevaprae _navbar_i, mis tegelt vahetub
+- Lisasin päevaprae _navbari_
+
 See osa mu tööst võttis kõige kauem aega, kuna olen sellega ka kõige vähem kokku puutunud, ma konsulteerisin oma kursusematerjale.
 
 
