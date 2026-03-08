@@ -7,6 +7,7 @@ Tehnoloogia: Spring boot backend, postgres andmebaas ja Vue.js frontend.
 1. Tõmba docker desktop
 2. Navigeeru projecti _source_ kausta, kus asuvad `docker-compose.yml` ja `Dockerfile`.
 3. Jooksuta terminalis `docker-compose up --build`
+4. Ava brauseris http://localhost:5173
 
 ## Töö jaotus ja kulunud aeg
 
