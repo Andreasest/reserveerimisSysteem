@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Random;
 
 @Component
 public class DataLoader implements ApplicationRunner {
@@ -39,13 +40,31 @@ public class DataLoader implements ApplicationRunner {
             ));
         }
         reservationRepository.deleteAll();
-        Table m1=tableRepository.findByName("M1");
-        reservationRepository.save(new Reservation(
-                "John",
-                2,
-                m1,
-                LocalDateTime.of(2026, 3, 10, 18, 0),
-                LocalDateTime.of(2026, 3, 10, 20, 0)));
+        generateRandomReservations();
+    }
+
+    private void generateRandomReservations() {
+        List<Table> tables=tableRepository.findAll();
+        String[] names= {"Andreas","Andres","Richard","Stefani","Jaagup","Margit", "Robert", "Bob"};
+        Random random=new Random();
+        for (Table table:tables){
+            int r=3+random.nextInt(4);
+            for (int i = 0; i < r; i++) {
+                int days= random.nextInt(7);
+                int hour=12+ random.nextInt(8);
+                LocalDateTime start=LocalDateTime.now()
+                        .plusDays(days)
+                        .withHour(hour)
+                        .withMinute(0);
+                LocalDateTime end=start.plusHours(2);
+
+                if (reservationRepository.findByTableAndEndAfterAndStartBefore(table,start,end).isEmpty()){
+                    String name=names[random.nextInt(names.length)];
+                    int partysize= table.getCapacity();
+                    reservationRepository.save(new Reservation(name,partysize,table,start,end));
+                }
+            }
+        }
     }
 
 
