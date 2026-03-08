@@ -2,6 +2,12 @@
 
 Tehnoloogia: Spring boot backend, postgres andmebaas ja Vue.js frontend.
 
+## Kuidas jooksutada
+
+1. Tõmba docker desktop
+2. Navigeeru projecti _source_ kausta, kus asuvad `docker-compose.yml` ja `Dockerfile`.
+3. Jooksuta terminalis `docker-compose up --build`
+
 ## Töö jaotus ja kulunud aeg
 
 **Algus ja ettevalmistus 2h**
@@ -22,13 +28,16 @@ Tehnoloogia: Spring boot backend, postgres andmebaas ja Vue.js frontend.
 
 See osa mu tööst võttis kõige kauem aega, kuna olen sellega ka kõige vähem kokku puutunud, ma konsulteerisin oma kursusematerjale.
 
+**Docker 1h**
 
+- Lisasin dockerifailid ja testisin programmi
 
 ## Probleemid ja lahendused
 
 Kuna ma ei ole Springbootiga väga palju kokku puutunud siis vaatasin palju Youtube'i videosid ja kursuseid selle kohta.
 
 ## AI kasutus
+
 - Ma lasin Geminil luua restorani taustapildi png
 - Kasutasin frontendi kirjutamisel _auto code complete_'i (backend täiesti ilma AI'd kasutamata)
 - Kasutasin _css_'i tegemisel tehisintellekti abi.
